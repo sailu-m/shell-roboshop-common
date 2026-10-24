@@ -10,7 +10,7 @@ Y="\e[33m"
 N="\e[0m"
 START_TIME=$(date +%s)
 
-echo "$(date "+%Y-%m-%d %H:%M:%S") | "Script started executing at: $(date)" | tee -a $LOGS_FILE
+echo "$(date "+%Y-%m-%d %H:%M:%S") | Script started executing at: $(date)" | tee -a $LOGS_FILE
 
 check_root(){
     if [ $USERID -ne 0 ]; then
