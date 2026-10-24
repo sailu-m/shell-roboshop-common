@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 SCRIPT_NAME=$(basename "$0")
-LOGS_FOLDER="/var/log/shell-roboshop"
+LOGS_FOLDER="/var/log/shell-roboshop-common"
 LOGS_FILE="$LOGS_FOLDER/$(basename "$0").log"
 R="\e[31m"
 G="\e[32m"
