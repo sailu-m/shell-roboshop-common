@@ -8,6 +8,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+START_TIME=$(date +%s)
 
 echo "$(date "+%Y-%m-%d %H:%M:%S") | "Script started executing at: $(date)" | tee -a $LOGS_FILE
 
@@ -22,9 +23,9 @@ mkdir -p $LOGS_FOLDER
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-        echo -e "$2 ... $R FAILURE $N" | tee -a $LOGS_FILE
+        echo -e "$(date "+%Y-%m-%d %H:%M:%S") | $2 ... $R FAILURE $N" | tee -a $LOGS_FILE
         exit 1
     else
-        echo -e "$2 ... $G SUCCESS $N" | tee -a $LOGS_FILE
+        echo -e "$(date "+%Y-%m-%d %H:%M:%S") | $2 ... $G SUCCESS $N" | tee -a $LOGS_FILE
     fi
 }
